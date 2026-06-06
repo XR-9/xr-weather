@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XR Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="cweather.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-items">
+
+            <div class="logo">
+                <i class="ti ti-infinity"></i>
+                <span>XR</span>
+            </div>
+
+            <div class="city">
+                <i class="ti ti-map-pin"></i>
+                <span>--</span>
+            </div>
+
+            <div class="scaler"></div>
+
+            <div class="searchbox">
+                <input type="text" placeholder="Search city..." id="search" />
+                <button type="button"><i class="ti ti-search"></i></button>
+            </div>
+
+
+            <div class="nav-icons">
+                <span><i class="ti ti-sun"></i></span>
+                <span><i class="ti ti-moon"></i></span>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="left-cont">
+
+            <!-- Current Weather Card -->
+            <div class="current-weather">
+                <div class="cw-top">
+                    <div>
+                        <span class="p1">Current Weather</span>
+                        <h2 class="time">--:-- --</h2>
+                    </div>
+                    <select>
+                        <option>Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                    </select>
+                </div>
+
+                <div class="cw-mid">
+                    <img id="tempimg" width="90" height="90" src="" alt="weather icon" />
+                    <div class="cw-temp">
+                        <div class="temp">
+                            <h2 class="temp-t">--</h2>
+                            <span class="temp-s">°C</span>
+                        </div>
+                        <div class="cw-details">
+                            <span class="wdetail">---</span>
+                            <span class="feellike">---</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="cw-desc">Search a city above to see current weather conditions.</p>
+            </div>
+
+            <!-- Row 2: Clouds / Humidity / Rain -->
+            <div class="middlebox">
+                <div class="cloud-index">
+                    <div class="details">
+                        <i class="ti ti-cloud"></i>
+                        <span>Clouds</span>
+                    </div>
+                    <div class="cloud-num">--</div>
+                </div>
+
+                <div class="humidity">
+                    <div class="details">
+                        <i class="ti ti-droplet"></i>
+                        <span>Humidity</span>
+                    </div>
+                    <div class="humidity-num">--</div>
+                </div>
+
+                <div class="rain-index">
+                    <div class="details">
+                        <i class="ti ti-cloud-rain"></i>
+                        <span>Rain</span>
+                    </div>
+                    <div class="rain-num">--</div>
+                </div>
+            </div>
+
+            <!-- Row 3: Wind / Visibility / Pressure -->
+            <div class="box">
+                <div class="wind">
+                    <div class="details">
+                        <i class="ti ti-wind"></i>
+                        <span>Wind</span>
+                    </div>
+                    <div class="wind-num">--</div>
+                </div>
+
+                <div class="visibility">
+                    <div class="details">
+                        <i class="ti ti-eye"></i>
+                        <span>Visibility</span>
+                    </div>
+                    <div class="vis-num">--</div>
+                </div>
+
+                <div class="pressure">
+                    <div class="details">
+                        <i class="ti ti-gauge"></i>
+                        <span>Pressure</span>
+                    </div>
+                    <div class="pt-num">--</div>
+                </div>
+            </div>
+
+            <!-- Row 4: sunset & sunrise -->
+            <div class="sunbox">
+                <div class="sunrise-card">
+                    <div class="details">
+                        <i class="ti ti-sunrise"></i>
+                        <span>Sunrise</span>
+                    </div>
+                    <div class="sunrise-time">--:-- --</div>
+                </div>
+                <div class="sunset-card">
+                    <div class="details">
+                        <i class="ti ti-sunset"></i>
+                        <span>Sunset</span>
+                    </div>
+                    <div class="sunset-time">--:-- --</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error & Loader -->
+        <div class="errorcont">
+            <div class="errorbox"></div>
+        <div class="loaderbox">
+            <div class="loader">
+                <div class="circle">
+                    <div class="dot"></div>
+                    <div class="outline"></div>
+                </div>
+                <div class="circle">
+                    <div class="dot"></div>
+                    <div class="outline"></div>
+                </div>
+                <div class="circle">
+                    <div class="dot"></div>
+                    <div class="outline"></div>
+                </div>
+                <div class="circle">
+                    <div class="dot"></div>
+                    <div class="outline"></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <script src="cweather.js"></script>
+</body>
+
+</html>
