@@ -42,8 +42,8 @@ A clean, glassmorphism weather dashboard built with vanilla HTML, CSS & JavaScri
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/xr-weather.git
-cd main
+git clone https://github.com/XR-9/xr-weather.git
+cd xr-weather
 ```
 
 ### 2. Get a free API key
@@ -69,7 +69,7 @@ Just open `cweather.html` directly in your browser — no server or build step n
 ## 📁 Project Structure
 
 ```
-main/
+xr-weather/
 │
 ├── cweather.html        # Main HTML file
 ├── cweather.css         # All styles (glassmorphism, dark mode, animations)
